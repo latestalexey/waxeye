@@ -9,6 +9,7 @@ mzscheme
 
 (require waxeye/ast
          scheme/cmdline
+         "1C.scm"
          "c.scm"
          "debug.scm"
          "file.scm"
@@ -82,6 +83,7 @@ mzscheme
                           ((ruby) gen-ruby)
                           ((scheme) gen-scheme)
                           ((javascript) gen-javascript)
+                          ((_1C) gen-1C)
                           (else #f)))
     (set! *output-path* (if (equal? (string-ref dir (- (string-length dir) 1)) #\/)
                             dir
